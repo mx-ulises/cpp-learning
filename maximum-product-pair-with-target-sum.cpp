@@ -11,6 +11,10 @@ public:
                 maximal = a * b;
                 output[1] = visited[b];
                 output[0] = i;
+                if (a < b) {
+                    output[0] = visited[b];
+                    output[1] = i;
+                }
             }
             visited[a] = i;
         }
